@@ -9,47 +9,59 @@ namespace StarTrek.Models
         {
         }
 
+        public DbSet<TrekEvent> TrekEvents { get; set; }
+        public DbSet<Character> Characters { get; set; }
+        public DbSet<Starship> Starships { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Character>()
                 .HasData(
-                    new Character { Name = "James T. Kirk", Bio = "Captain of the USS Enterprise NCC-1701", CharacterId = 1 },
+                    new Character { Name = "James T. Kirk", Bio = "Captain of the USS Enterprise NCC-1701", CharacterId = 1, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290789948895242/captain-kirk.jpg" },
 
-                    new Character { Name = "Hikaru Sulu", Bio = "Helmsman on the USS Enterprise NCC-1701", CharacterId = 2 },
+                    new Character { Name = "Hikaru Sulu", Bio = "Helmsman on the USS Enterprise NCC-1701", CharacterId = 2, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290790510952478/Hikaru-Sulu-star-trek-the-movies-13224553-900-1330.jpg" },
 
-                    new Character { Name = "Nyota Uhura", Bio = "Chief Communications Officer on the USS Enterprise NCC-1701", CharacterId = 3 },
+                    new Character { Name = "Nyota Uhura", Bio = "Chief Communications Officer on the USS Enterprise NCC-1701", CharacterId = 3, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290791479820308/Nyota-Uhura-star-trek-the-movies-13224660-580-901.jpg" },
 
-                    new Character { Name = "Spock", Bio = "Chief Science Officer on the USS Enterprise NCC-1701", CharacterId = 4 },
+                    new Character { Name = "Spock", Bio = "Chief Science Officer on the USS Enterprise NCC-1701", CharacterId = 4, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290790888415322/Mr-Spock-star-trek-the-movies-13224893-800-1100.jpg" },
 
-                    new Character { Name = "Leonard McCoy", Bio = "Chief Medical Officer on the USS Enterprise NCC-1701", CharacterId = 5 },
+                    new Character { Name = "Leonard McCoy", Bio = "Chief Medical Officer on the USS Enterprise NCC-1701", CharacterId = 5, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290790221516810/Dr-Leonard-McCoy-star-trek-the-movies-13224707-800-990.jpg" },
 
-                    new Character { Name = "Montgomery Scott", Bio = "Chief Engineer on the USS Enterprise NCC-1701", CharacterId = 6 },
+                    new Character { Name = "Montgomery Scott", Bio = "Chief Engineer on the USS Enterprise NCC-1701", CharacterId = 6, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961299292981710879/montgomery-scott.png" },
 
-                    new Character { Name = "Pavel Chekov", Bio = "First Officer on the USS Enterprise NCC-1701", CharacterId = 7 },
+                    new Character { Name = "Pavel Chekov", Bio = "First Officer on the USS Enterprise NCC-1701", CharacterId = 7, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961290791173623818/Pavel-Chekov-star-trek-the-movies-13223605-580-901.jpg" },
 
-                    new Character { Name = "Jean Luc Picard", Bio = "Captain of the USS Enterprise C", CharacterId = 8 },
+                    new Character { Name = "Jean Luc Picard", Bio = "Captain of the USS Enterprise C", CharacterId = 8, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961297643164799007/jean-luc-picard.png" },
 
-                    new Character { Name = "Geordi LeForge", Bio = "Chief Engineer on the USS Enterprise C", CharacterId = 9 },
+                    new Character { Name = "Geordi LeForge", Bio = "Chief Engineer on the USS Enterprise C", CharacterId = 9, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961297070139007046/41Td62h3vL._AC_.jpg" },
 
-                    new Character { Name = "Worf", Bio = "Chief of Security on the USS Enterprise C", CharacterId = 10 },
+                    new Character { Name = "Worf", Bio = "Chief of Security on the USS Enterprise C", CharacterId = 10, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961296578591727676/star-trek-worf-michael-dorn-1200x675.jpg" },
 
-                    new Character { Name = "William Riker", Bio = "Commander on the USS Enterprise C", CharacterId = 11 },
+                    new Character { Name = "William Riker", Bio = "Commander on the USS Enterprise C", CharacterId = 11, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961298256887959582/william-t-riker.png" },
 
-                    new Character { Name = "Dianna Troi", Bio = "Counselor on the USS Enterprise C", CharacterId = 12 },
+                    new Character { Name = "Dianna Troi", Bio = "Counselor on the USS Enterprise C", CharacterId = 12, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961298612795605032/dianna-troi.png" },
 
-                    new Character { Name = "Dana Yar", Bio = "Former Chief of Security on the USS Enterprise C", CharacterId = 13 },
+                    new Character { Name = "Dana Yar", Bio = "Former Chief of Security on the USS Enterprise C", CharacterId = 13, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961295616061882408/unknown.png" },
 
-                    new Character { Name = "Beverly Crusher", Bio = "Chief Medical Officer on the USS Enterprise C", CharacterId = 14 },
+                    new Character { Name = "Beverly Crusher", Bio = "Chief Medical Officer on the USS Enterprise C", CharacterId = 14, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961295847574868069/unknown.png" },
 
-                    new Character { Name = "Wesley Crusher", Bio = "Ensign aboard the USS Enterprise-C, training to become a Starfleet Officer.", CharacterId = 15 },
+                    new Character { Name = "Wesley Crusher", Bio = "Ensign aboard the USS Enterprise-C, training to become a Starfleet Officer.", CharacterId = 15, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961296050252054648/unknown.png" },
                     
-                    new Character { Name = "Zefram Cochrane", Bio = "Inventor of the first Warp Drive.", CharacterId = 16 },
+                    new Character { Name = "Zefram Cochrane", Bio = "Inventor of the first Warp Drive.", CharacterId = 16, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961295041601609840/unknown.png" },
                     
-                    new Character { Name = "Q", Bio = "Member of the Q Continuum. Q is the reason the Borg now know about humanity.", CharacterId = 17 },
+                    new Character { Name = "Q", Bio = "Member of the Q Continuum. Q is the reason the Borg now know about humanity.", CharacterId = 17, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961291743582625802/unknown.png" },
 
-                    new Character { Name = "Sarek", Bio = "Ambassador of Vulcan and father of Spock", CharacterId = 18 }
+                    new Character { Name = "Sarek", Bio = "Ambassador of Vulcan and father of Spock", CharacterId = 18, Image = "https://cdn.discordapp.com/attachments/959946752771915856/961294534761914458/unknown.png" }
                 );
-
+            builder.Entity<Starship>()
+                .HasData(
+                    new Starship { ShipModel = "USS Enterprise NCC-1701", ShipClass = "Constitution", Captain ="James T Kirk",  Launch = "2245", StarshipId = 1, Image = "https://media.discordapp.net/attachments/959946752771915856/961313799321821194/unknown.png" },
+                    new Starship { ShipModel = "USS Enterprise NCC-1701-A", ShipClass = "Constitution", Captain ="James T Kirk",  Launch = "2286", StarshipId = 2, Image = "https://media.discordapp.net/attachments/959946752771915856/961314079862034442/unknown.png" },
+                    new Starship { ShipModel = "USS Enterprise NCC-1701-B", ShipClass = "Excelsior", Captain ="James T Kirk",  Launch = "2293", StarshipId = 3, Image = "https://media.discordapp.net/attachments/959946752771915856/961314199563280464/unknown.png" },
+                    new Starship { ShipModel = "USS Enterprise NCC-1701-C", ShipClass = "Ambassador", Captain ="James T Kirk",  Launch = "2332", StarshipId = 4, Image = "https://media.discordapp.net/attachments/959946752771915856/961314317066711040/unknown.png" },
+                    new Starship { ShipModel = "USS Enterprise NCC-1701-D", ShipClass = "Galaxy", Captain ="Jean Luc Picard",  Launch = "2363", StarshipId = 5, Image = "https://media.discordapp.net/attachments/959946752771915856/961314925395980388/unknown.png?width=881&height=378" },
+                    new Starship { ShipModel = "USS Enterprise NCC-1701-E", ShipClass = "Sovereign", Captain ="Jean Luc Picard", Launch = "2372", StarshipId = 6, Image = "https://media.discordapp.net/attachments/959946752771915856/961314692226252850/unknown.png?width=881&height=315" }
+                );
             builder.Entity<TrekEvent>()
                 .HasData(
                     new TrekEvent { Date = 1986, Description = "The crew of the USS Enterprise return back to Earth after their voyage to save Spock, only to find that an alien life-form probing Earth. Earth is destroyed, forcing the crew to find a way to travel back in time to prevent Earth's destruction.", TrekEventId = 1 },
@@ -155,7 +167,6 @@ namespace StarTrek.Models
             );
         }
 
-        public DbSet<TrekEvent> TrekEvents { get; set; }
-        public DbSet<Character> Characters { get; set; }
+        
     }
 }
